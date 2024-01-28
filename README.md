@@ -22,131 +22,131 @@ Use the schema.sql file in the db folder to create your database using MySQL she
 Database Models
 Your database should contain the following four models, including the requirements listed for each model:
 
-CATEGORY
+- `Category`
 
-id
+  - `id`
 
-Integer
+    - Integer.
 
-Doesn't allow null values
+    - Doesn't allow null values.
 
-Set as primary key
+    - Set as primary key.
 
-Uses auto increment
+    - Uses auto increment.
 
-category_name
+  - `category_name`
 
-String
+    - String.
 
-Doesn't allow null values
+    - Doesn't allow null values.
 
-PRODUCT
+- `Product`
 
-id
+  - `id`
 
-Integer
+    - Integer.
 
-Doesn't allow null values
+    - Doesn't allow null values.
 
-Set as primary key
+    - Set as primary key.
 
-Uses auto increment
+    - Uses auto increment.
 
-product_name
+  - `product_name`
 
-String
+    - String.
 
-Doesn't allow null values
+    - Doesn't allow null values.
 
-price
+  - `price`
 
-Decimal
+    - Decimal.
 
-Doesn't allow null values
+    - Doesn't allow null values.
 
-Validates that the value is a decimal
+    - Validates that the value is a decimal.
 
-stock
+  - `stock`
 
-Integer
+    - Integer.
 
-Doesn't allow null values
+    - Doesn't allow null values.
 
-Set a default value of 10
+    - Set a default value of `10`.
 
-Validates that the value is numeric
+    - Validates that the value is numeric.
 
-category_id
+  - `category_id`
 
-Integer
+    - Integer.
 
-References the category model's id
+    - References the `Category` model's `id`.
 
-TAG
+- `Tag`
 
-id
+  - `id`
 
-Integer
+    - Integer.
 
-Doesn't allow null values
+    - Doesn't allow null values.
 
-Set as primary key
+    - Set as primary key.
 
-Uses auto increment
+    - Uses auto increment.
 
-tag_name
+  - `tag_name`
 
-String
+    - String.
 
-PRODUCTTAG
+- `ProductTag`
 
-id
+  - `id`
 
-Integer
+    - Integer.
 
-Doesn't allow null values
+    - Doesn't allow null values.
 
-Set as primary key
+    - Set as primary key.
 
-Uses auto increment
+    - Uses auto increment.
 
-product_id
+  - `product_id`
 
-Integer
+    - Integer.
 
-References the product model's id
+    - References the `Product` model's `id`.
 
-tag_id
+  - `tag_id`
 
-Integer
+    - Integer.
 
-References the tag model's id
+    - References the `Tag` model's `id`.
 
-Associations
+### Associations
+
 You'll need to execute association methods on your Sequelize models to create the following relationships between them:
 
-Product belongs to Category, as a category can have multiple products but a product can only belong to one category.
+- `Product` belongs to `Category`, and `Category` has many `Product` models, as a category can have multiple products but a product can only belong to one category.
 
-Category has many Product models.
+- `Product` belongs to many `Tag` models, and `Tag` belongs to many `Product` models. Allow products to have multiple tags and tags to have many products by using the `ProductTag` through model.
 
-Product belongs to many Tag models. Using the ProductTag through model, allow products to have multiple tags and tags to have many products.
+> **Hint:** Make sure you set up foreign key relationships that match the column we created in the respective models.
 
-Tag belongs to many Product models.
+### Fill Out the API Routes to Perform RESTful CRUD Operations
 
-HINT
-Make sure you set up foreign key relationships that match the column we created in the respective models.
+Fill out the unfinished routes in `product-routes.js`, `tag-routes.js`, and `category-routes.js` to perform create, read, update, and delete operations using your Sequelize models.
 
-Fill Out the API Routes to Perform RESTful CRUD Operations
-Fill out the unfinished routes in product-routes.js, tag-routes.js, and category-routes.js to perform create, read, update, and delete operations using your Sequelize models.
+Note that the functionality for creating the many-to-many relationship for products has already been completed for you.
 
-HINT
-Be sure to look at your module project's code for syntax help and use your model's column definitions to figure out what req.body will be for POST and PUT routes!
+> **Hint**: Be sure to look at the mini-project code for syntax help and use your model's column definitions to figure out what `req.body` will be for POST and PUT routes!
 
-Seed the Database
-After creating the models and routes, run npm run seed to seed data to your database so that you can test your routes.
+### Seed the Database
 
-Sync Sequelize to the Database on Server Start
-Create the code needed in server.js to sync the Sequelize models to the MySQL database on server start.
+After creating the models and routes, run `npm run seed` to seed data to your database so that you can test your routes.
+
+### Sync Sequelize to the Database on Server Start
+
+Create the code needed in `server.js` to sync the Sequelize models to the MySQL database on server start.
 
 Deliverables: 10%
 Your GitHub repository containing your application code.
