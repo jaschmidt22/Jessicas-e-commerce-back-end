@@ -6,14 +6,15 @@ class Tag extends Model {}
 
 Tag.init(
   {
+    // define columns for the Tag table
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primarykey: true,
-      autoIncrement: true,
+      type: DataTypes.INTEGER, // Integer data type
+      allowNull: false, // Doesn't allow null values
+      primaryKey: true, // Set as primary key
+      autoIncrement: true, // Uses auto increment
     },
     tag_name: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING, // sets data type to string
     },
   },
   {
@@ -26,19 +27,3 @@ Tag.init(
 );
 
 module.exports = Tag;
-
-// /- `Tag`
-
-// - `id`
-
-//   - Integer.
-
-//   - Doesn't allow null values.
-
-//   - Set as primary key.
-
-//   - Uses auto increment.
-
-// - `tag_name`
-
-//   - String.
