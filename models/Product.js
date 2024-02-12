@@ -13,7 +13,7 @@ Product.init(
       type: DataTypes.INTEGER, // define data type
       allowNull: false, // does not allow null values
       primaryKey: true, // set as primary key
-      autoIncrement: true, // uses auto increment
+      autoIncrement: true, // automatically increase value
     },
     product_name: {
       type: DataTypes.STRING, // define data type
@@ -31,7 +31,7 @@ Product.init(
       allowNull: false, // does not allow null values
       defaultValue: 10, // set default value
       validate: {
-        isNumeric: true, // checks for numeric
+        isNumeric: true, // checks for numbers
       },
     },
     category_id: {

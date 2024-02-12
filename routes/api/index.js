@@ -1,6 +1,7 @@
-// Require the express router
+//require the express router
 const router = require("express").Router();
-// Require the category-routes.js, product-routes.js, and tag-routes.js files
+
+//require the category-routes.js, product-routes.js, and tag-routes.js files
 const categoryRoutes = require("./category-routes");
 const productRoutes = require("./product-routes");
 const tagRoutes = require("./tag-routes");
