@@ -22,7 +22,7 @@ https://drive.google.com/file/d/1tE2b5bu4GPwDQQ90tDfqtsU0z3DSEoNR/view
 
 ## Credits
 
-Throughout the making of this project, I frequently referenced my class repository ASU-VIRT-FSF-PT-10-2023-U-LOLC. I also referenced Google, W3Schools, MDN Webdocs, dev.mysql.com, sequelize.com, npmjs.com/express, npmjs.com/dotenv, Postman, and chatGPT.
+Throughout the making of this project, I frequently referenced my class repository ASU-VIRT-FSF-PT-10-2023-U-LOLC. I also referenced Google, W3Schools, MDN Webdocs, dev.mysql.com, sequelize.com, npmjs.com/express, npmjs.com/dotenv, Postman, and chatGPT. I also received tips during a tutoring session with Michell Brito. 
 
 ## Contact Info
 
