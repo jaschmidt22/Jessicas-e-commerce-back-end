@@ -18,7 +18,7 @@ Category.init(
 
     category_name: {
       type: DataTypes.STRING, // String data type
-      allowNull: false, // Doesn't allow null values
+      allowNull: false, //Doesn't allow null values
     },
   },
   {
