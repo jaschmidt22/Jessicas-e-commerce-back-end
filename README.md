@@ -15,7 +15,8 @@ I was given the task of building the back end for an e-commerce web site. E-comm
 ## Usage
 
 First, you will need to install Node.js and install the packages to connect your Express.js API to a MySQL database. Be sure to install the dotenv package to store your user name and password. Make sure you log into MySQL, then run the schema.sql file to create the database using MySQL shell commands. Then use the "npm run seed" command to seed the database. Once the database is seeded, run the server and then head on over to Postman or Insomnia to test routes for categories, products, and tags.
-https://github.com/jaschmidt22/e-commerce-back-end
+https://github.com/jaschmidt22/Jessicas-e-commerce-back-end
+https://drive.google.com/file/d/1tE2b5bu4GPwDQQ90tDfqtsU0z3DSEoNR/view
 
 ![Alt text](image.png)
 
